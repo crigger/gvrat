@@ -1,0 +1,44 @@
+// *****************************************************************************
+// File: utilities/_mixins.scss
+
+// Responisve Units
+
+@mixin responsive-thing($thing, $responsive, $min, $max: false, $fallback: false) {
+  $responsive-unitless: $responsive / ($responsive - $responsive + 1);
+  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
+  $min-breakpoint: $min / $responsive-unitless * 100;
+
+  @media (max-#{$dimension}: #{$min-breakpoint}) {
+    #{$thing}: $min;
+  }
+
+  @if $max {
+    $max-breakpoint: $max / $responsive-unitless * 100;
+
+    @media (min-#{$dimension}: #{$max-breakpoint}) {
+      #{$thing}: $max;
+    }
+  }
+
+  @if $fallback {
+    #{$thing}: $fallback;
+  }
+
+  #{$thing}: $responsive;
+}
+
+@mixin vw-font($responsive, $min, $max: false, $fallback: false) {
+  @include responsive-thing(font-size, $responsive, $min, $max, $fallback)
+}
+
+@mixin base-spacer($box, $scale: 1) {
+  #{$box}: $scale * 1em;
+
+  @media (min-width: $breakpoint-md) {
+    #{$box}: $scale * 2em;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    #{$box}: $scale * 6em;
+  }
+}

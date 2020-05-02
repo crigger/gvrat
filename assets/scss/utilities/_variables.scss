@@ -1,0 +1,24 @@
+// *****************************************************************************
+// File: utilities/_variables.scss
+
+// FONTS
+$sans: Helvetica, sans-serif;
+
+// COLORS
+$lighter: #fac31e;
+$light: #fa641e;
+$dark: #281414;
+
+// BREAKPOINTS
+$breakpoint-sm: 400px;
+$breakpoint-md: 560px;
+$breakpoint-lg: 1040px;
+$breakpoint-xl: 1440px;
+
+// EASING
+$ease-out-quint: cubic-bezier(.23, 1, .32, 1);
+$ease-in-out-quint: cubic-bezier(.86, 0, .07, 1);
+$ease-in-out-cubic: cubic-bezier(.645, .045, .355, 1);
+
+$ease-in-out-sine: cubic-bezier(.445, .05, .55, .95);
+$ease-out-sine: cubic-bezier(.39, .575, .565, 1);

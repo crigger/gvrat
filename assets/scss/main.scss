@@ -1,0 +1,21 @@
+// *****************************************************************************
+// File: main.scss
+
+
+
+// **********
+// UTILITIES
+//
+// Outputs no CSS, but provides mixins and variables (after so they can override
+// default mixin variables) for use in partials.
+
+@import 'utilities';
+
+
+// **********
+// PARTIALS
+//
+// Outputs global styles.
+
+@import 'partials/reset';
+@import 'partials/base';
