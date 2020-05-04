@@ -53,7 +53,7 @@
   @keyframes time {
     to {
       // transform: scaleX(1);
-      transform: scaleX((2 / 123))
+      transform: scaleX((4 / 123))
     }
   }
 
@@ -66,7 +66,7 @@
     top: 0;
     // transform: scaleX(0);
     transform-origin: left;
-    // width: (2 / 123 * 100%);
+    // width: (4 / 123 * 100%);
     width: 100%;
     z-index: -1;
   }

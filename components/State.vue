@@ -18,13 +18,13 @@
   @keyframes run {
     to {
       // stroke-dashoffset: 0;
-      stroke-dashoffset: (3164 - ((2 / 123) * 3164));
+      stroke-dashoffset: (3164 - ((4 / 123) * 3164));
     }
   }
 
   .shape,
   .line {
-    stroke-width: 1.5vmin;
+    stroke-width: 0.5vmin;
   }
 
   .progress {
@@ -34,7 +34,7 @@
     // stroke-dashoffset: 3164;
     stroke-dashoffset: 0;
     stroke-linejoin: round;
-    stroke-miterlimit: 10000;
-    stroke-width: 5vmin;
+    // stroke-miterlimit: 10000;
+    stroke-width: 2vmin;
   }
 </style>
