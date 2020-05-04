@@ -11,10 +11,6 @@
     overflow: visible;
   }
 
-  path {
-    stroke: $dark;
-  }
-
   @keyframes run {
     to {
       // stroke-dashoffset: 0;
@@ -22,19 +18,28 @@
     }
   }
 
-  .shape,
+  .shape {
+    @include responsive-thing(stroke-width, 1vmin, 10px, 20px, 10px);
+    stroke: $dark;
+  }
+
   .line {
-    stroke-width: 0.5vmin;
+    @include responsive-thing(stroke-width, 0.5vmin, 5px, 10px, 5px);
+    stroke: $lighter;
   }
 
   .progress {
-    animation: run 5s 1.5s $ease-out-quint forwards;
+    @include responsive-thing(stroke-width, 2vmin, 20px, 40px, 20px);
 
+    animation: run 5s 1.5s $ease-out-quint forwards;
+    stroke: $dark;
     stroke-dasharray: 3164;
     // stroke-dashoffset: 3164;
     stroke-dashoffset: 0;
-    stroke-linejoin: round;
-    // stroke-miterlimit: 10000;
-    stroke-width: 2vmin;
+    // stroke-linejoin: round;
+    stroke-linejoin: miter;
+    stroke-linecap: round;
+    stroke-miterlimit: 3;
+    // stroke-width: 2vmin;
   }
 </style>
