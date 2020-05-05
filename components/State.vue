@@ -14,7 +14,7 @@
   @keyframes run {
     to {
       // stroke-dashoffset: 0;
-      stroke-dashoffset: (3164 - ((4 / 123) * 3164));
+      stroke-dashoffset: (3164 - ((5 / 123) * 3164));
     }
   }
 
