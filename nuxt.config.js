@@ -78,6 +78,9 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/date-fns'
   ],
+  dateFns: {
+    defaultLocale: 'en-US'
+  },
   /*
    ** Nuxt.js modules
    */
