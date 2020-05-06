@@ -34,7 +34,7 @@ export default {
       {
         hid: 'og:site_name',
         property: 'og:site_name',
-        content: 'The Great Virtual Race Across Tennessee, Inc.'
+        content: 'The Great Virtual Race Across Tennessee'
       },
       { hid: 'og:type', property: 'og:type', content: 'website' },
 
@@ -70,8 +70,7 @@ export default {
   ** Plugins
   */
   plugins: [
-    'plugins/components.js',
-    { src: 'plugins/globals.js', ssr: false }
+    'plugins/components.js'
   ],
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
@@ -85,16 +84,9 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources'
   ],
-  /*
-   ** Axios module configuration
-   ** See https://axios.nuxtjs.org/options
-   */
-  axios: {},
   /*
   ** PWA Modules
   */
@@ -103,18 +95,8 @@ export default {
     short_name: 'GVRAT',
     lang: 'en',
     description: 'The Great Virtual Race Across Tennessee: 1,000 kilometers across Tennessee from the very southwestern tip of the state to the very northeastern tip of the state.',
-    theme_color: '#fa641e',
+    theme_color: '#281414',
     background_color: '#fa641e'
-  },
-  render: {
-    static: {
-      maxAge: '1y',
-      setHeaders(res, path) {
-        if (path.includes('sw.js')) {
-          res.setHeader('Cache-Control', 'public, max-age=0')
-        }
-      }
-    }
   },
   workbox: {
     dev: false,
