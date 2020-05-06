@@ -27,9 +27,9 @@
 </template>
 
 <script>
+import getDayOfYear from 'date-fns/get_day_of_year'
 export default {
   asyncData(ctx) {
-    const getDayOfYear = require('date-fns/get_day_of_year')
     const year = ctx.app.$dateFns.format(new Date(), 'y')
     const month = ctx.app.$dateFns.format(new Date(), 'M')
     const day = ctx.app.$dateFns.format(new Date(), 'd')
