@@ -78,6 +78,10 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/date-fns'
   ],
+
+  dateFns: {
+    methods: ['format', 'getDayOfYear']
+  },
   /*
    ** Nuxt.js modules
    */
