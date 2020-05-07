@@ -40,9 +40,9 @@ export default {
   }
 
   .progress {
-    @include responsive-thing(stroke-width, 2vmin, 20px, 40px, 20px);
+    @include responsive-thing(stroke-width, 1.5vmin, 15px, 25px, 20px);
 
-    animation: run 5s $ease-out-quint;
+    animation: run 5s 2s $ease-out-quint backwards;
     stroke: $dark;
     stroke-dasharray: 3164;
     stroke-linejoin: round;
